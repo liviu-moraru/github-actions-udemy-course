@@ -29,7 +29,46 @@
 
   - Pt. repositoriile publice, serviciul GitHub Actions este gratuit.
   - Pt. cele private este o [cota lunara](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-  - 
+  
+  
+  ## Primul workflow
+
+```yaml
+name: First Workflow
+on: workflow_dispatch
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: echo "Hello World!"
+      - name: Print goodbye
+        run: echo "Done - bye!"
+```
+
+Tradus in json:
+
+```
+{
+    "name": "First Workflow",
+    "on": "workflow_dispatch",
+    "jobs": {
+        "first-job": {
+            "runs-on": "ubuntu-latest",
+            "steps": [
+                {
+                    "name": "Print greeting",
+                    "run": "echo \"Hello World!\""
+                },
+                {
+                    "name": "Print goodbye",
+                    "run": "echo \"Done - bye!\""
+                }
+            ]
+        }
+    }
+}
+```
 
 
 
