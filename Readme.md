@@ -70,6 +70,22 @@ Tradus in json:
 }
 ```
 
+## Running multi-line shell commands
+
+```
+    run: |
+        echo "First output"
+        echo "Second output"
+```
+In Json:
+```
+"run": "echo \"First output\"\necho \"Second output\n"
+```
+
+### 39. More Realistic Example (A React application)
+Aici este [proiectul](https://github.com/liviu-moraru/second-actions-react-demo) pe GitHub
+
+
 
 
 
